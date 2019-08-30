@@ -14,11 +14,11 @@ process.stdin.on('readable', function () {
                 break;
             case '/version':
                 process.stdout.write('\nNode.js Version:\n')
-                process.stdout.write(process.version + '\n');
+                process.stdout.write(process.versions.node + '\n');
                 break;
             case '/lang':
                 process.stdout.write('\nOS Version:\n');
-                process.stdout.write(process.env.OS + '\n');
+                process.stdout.write(process.env.LANG + '\n');
                 break;
             default:
                 process.stderr.write('Wrong instruction!\n');
